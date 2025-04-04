@@ -1,0 +1,14 @@
+.search--bar {
+    width: 35% !important;
+    padding:0.5rem;
+    padding-left: 1rem;
+    margin: 5px;
+    border: 1px solid gainsboro;
+    border-radius: 20px;
+
+    &::placeholder {
+        color: #16404D;
+        font-size: 10px;
+    }
+}
+

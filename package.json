@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "react": "^18.2.0",
+    "react-date-object": "^2.1.9",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.4.1",
+    "sass": "^1.86.2",
     "vite-tsconfig-paths": "^5.1.4"
   },
   "devDependencies": {
