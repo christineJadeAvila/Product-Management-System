@@ -1,0 +1,18 @@
+import { useState } from "react"
+import SideBar from "./SideBar"
+import burgerMenu from "../assets/burgerMenu.svg"
+
+function BurgerMenu() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (<>
+    <div className="burger-menu">
+        <img src={burgerMenu} alt="" className="burger-menu"/>
+    </div>
+    s
+    {isOpen && <SideBar/>}
+  </>
+  )
+}
+
+export default BurgerMenu
