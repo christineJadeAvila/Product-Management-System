@@ -1,13 +1,4 @@
-$primary-color: #2C72F7;
-$highlight-color: #FDFF75;
-$dark-color: #16404D;
-$background-color: #FFFF;
-$danger-color: #FB4A4A;
-
-* {
-    margin: 0;
-    font-family: "Urbanist", Arial, Helvetica, sans-serif;
-}
+@import "../../index.scss";
 
 .header-bar {
     margin: 1rem;
@@ -15,7 +6,6 @@ $danger-color: #FB4A4A;
     justify-content: space-between;
     align-items: center; 
     padding: 1rem;
-
     .add-product {
         height: 40px;
         padding: 0.5rem 3rem;
@@ -24,7 +14,6 @@ $danger-color: #FB4A4A;
         border: none;
         border-radius: 20px;
         cursor: pointer;
-        
     }
 }
 
@@ -33,7 +22,6 @@ $danger-color: #FB4A4A;
     gap: 20px;
     grid-template-areas: "side-bar products-container";
     grid-template-columns: 1fr 3fr;
-
     // SIDE BAR
     .side-bar {
         margin: 0.5rem;
@@ -61,7 +49,6 @@ $danger-color: #FB4A4A;
             }
         }
     }
-
     // PRODUCTS CONTAINER
     .products-container {
         margin: 0.5rem;
@@ -73,7 +60,6 @@ $danger-color: #FB4A4A;
             border-radius: 5px;
             overflow: hidden;
             margin-top: 1rem;
-
             th {
                 background-color: #f9f9f9;
                 padding: 15px;
@@ -93,13 +79,11 @@ $danger-color: #FB4A4A;
                 }
                 .update-link {
                     color: $primary-color;
-                    
                 }
                 .delete-link {
                     color: $danger-color;
                 }
             }
-            
         }
     }
 }

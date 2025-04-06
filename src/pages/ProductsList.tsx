@@ -22,7 +22,6 @@ function ProductsList() {
     navigate("update-product")
   }
 
-
   const [products] = useState<Product[]>([
     { id: 1, name: "Banana Split", category: "Dessert", price: 180.00, status: "Active", img: "🍰" },
     { id: 2, name: "Buko Pandan", category: "Dessert", price: 140.00, status: "Active", img: "🥥" },
@@ -76,8 +75,6 @@ function ProductsList() {
           </table>
         </main>
         </div>
-
-        
     </>
   )
 }
