@@ -49,6 +49,7 @@ function UpdateProduct() {
               type="text" 
               className="form-input" 
               placeholder="Product Name"
+              required
             />
           </div>
           
@@ -58,12 +59,13 @@ function UpdateProduct() {
               type="number" 
               className="form-input" 
               placeholder="Product Price"
+              required
             />
           </div>
           
           <div className="form-row">
             <label className="form-label required">Category</label>
-            <select className="form-select">
+            <select className="form-select" required>
               <option value="" disabled selected>Category</option>
             </select>
           </div>
@@ -76,6 +78,7 @@ function UpdateProduct() {
                 id="img" 
                 name="img" 
                 accept="image/*"
+                required
               />
               <div className="upload-subtitle">Accepts images in png, jpg, and jpeg</div>
               <div className="image-preview">
