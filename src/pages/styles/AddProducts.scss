@@ -1,7 +1,11 @@
 @import "../../index.scss";
 
 .time-n-date {
+    margin-left: auto;
     display: flex;
+    .real-time {
+        width: 110px;
+    }
     .date-time {
         margin-left: 1rem;
     }

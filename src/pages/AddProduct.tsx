@@ -28,13 +28,13 @@ function AddProduct() {
 
       <header className="header-bar">
         <img src={burgerMenu} alt="" className="burger-menu" />
-        <h2>Product Management System</h2>
+        <h2 className="page-title">Product Management System</h2>
         {/* time and date */}
         <div className="time-n-date">
           <img className="date-time" src={calendar} alt="" />
             <p className="nav-date">{date.format("dddd, DD MMMM YYYY")}</p>
           <img className="date-time" src={clock} alt="" />
-            <p>{time.toLocaleString("en-US", {
+            <p className="real-time">{time.toLocaleString("en-US", {
                 timeStyle: "medium",
                 hour12: true,
           })} </p>

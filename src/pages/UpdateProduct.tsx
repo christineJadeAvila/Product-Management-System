@@ -25,7 +25,7 @@ function UpdateProduct() {
       <a href="" onClick={back} className="back">back</a>
       <header className="header-bar">
         <img src={burgerMenu} alt="" className="burger-menu" />
-        <h2>Product Management System</h2>
+        <h2 className="page-title">Product Management System</h2>
         {/* time and date */}
         <div className="time-n-date">
           <img className="date-time" src={calendar} alt="" />

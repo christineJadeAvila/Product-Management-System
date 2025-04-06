@@ -32,7 +32,7 @@ function ProductsList() {
     <>
       <header className="header-bar">
         <img src={burgerMenu} alt="" className="burger-menu" />
-        <h2>Product Management System</h2>
+        <h2 className="page-title">Product Management System</h2>
         <button className="add-product" onClick={add}>Add Product</button>
       </header>
       
