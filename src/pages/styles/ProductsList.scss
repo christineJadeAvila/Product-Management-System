@@ -17,6 +17,11 @@
         border: none;
         border-radius: 20px;
         cursor: pointer;
+        &:hover {
+            transform: scale(0.99);
+            transition: 1s;
+            color: $darker-than-white;
+        }
     }
 }
 
