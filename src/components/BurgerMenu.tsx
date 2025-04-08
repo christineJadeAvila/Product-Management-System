@@ -1,4 +1,5 @@
 import { useState } from "react"
+import "./styles/BurgerMenu.scss"
 import SideBar from "./SideBar"
 import burgerMenu from "../assets/burgerMenu.svg"
 

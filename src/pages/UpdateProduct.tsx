@@ -1,45 +1,21 @@
-import { useNavigate } from "react-router-dom"
-import { useState, useEffect  } from "react"
-import DateObject from "react-date-object"
-import calendar from "../assets/calendar.png"
-import clock from "../assets/clock.png"
+import BackButton from "../components/BackButton"
 import BurgerMenu from "../components/BurgerMenu"
+import TimeAndDate from "../components/TimeAndDate"
 import "./styles/AddProducts.scss"
 
 function UpdateProduct() {
-  const navigate = useNavigate()
-  const back = () => {
-    navigate("/")
-  }
-
-  // live clock
-  const [time, setTime ] = useState(new Date());
-  let date = new DateObject()
-  useEffect(() => {
-      setInterval(() => {
-          setTime(new Date())
-      }, 1000)
-  }, [])
   return (
     <>
       <header className="header-bar">
         <BurgerMenu/>
         <h2 className="page-title">Product Management System</h2>
         {/* time and date */}
-        <div className="time-n-date">
-          <img className="date-time" src={calendar} alt="" />
-            <p className="nav-date">{date.format("dddd, DD MMMM YYYY")}</p>
-          <img className="date-time" src={clock} alt="" />
-            <p>{time.toLocaleString("en-US", {
-                timeStyle: "medium",
-                hour12: true,
-          })} </p>
-        </div>
+        <TimeAndDate/>
       </header>
 
       {/* Add product form */}
       <div className="add-product-header">
-        <a href="" onClick={back} className="back">back</a>
+        <BackButton/>
         <h2>Update Product</h2>
       </div>
       <div className="form-container">
