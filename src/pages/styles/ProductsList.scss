@@ -68,32 +68,39 @@
             border-radius: 5px;
             overflow: hidden;
             margin-top: 1rem;
+
+            .product-row {
+                cursor: pointer;
+                &:hover {
+                    background-color: $darker-than-white;
+                }
+                td {
+                    padding: 15px;
+                    border-top: 1px solid #eee;
+                }
+                .action-links {
+                    a {
+                        margin-right: 15px;
+                        text-decoration: none;
+                        cursor: pointer;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    .update-link {
+                        color: $primary-color;
+                    }
+                    .delete-link {
+                        color: $danger-color;
+                    }
+                }
+            }
             th {
                 background-color: #f9f9f9;
                 padding: 15px;
                 text-align: left;
                 font-weight: bold;
                 color: #333;
-            }
-            td {
-                padding: 15px;
-                border-top: 1px solid #eee;
-            }
-            .action-links {
-                a {
-                    margin-right: 15px;
-                    text-decoration: none;
-                    cursor: pointer;
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-                .update-link {
-                    color: $primary-color;
-                }
-                .delete-link {
-                    color: $danger-color;
-                }
             }
         }
     }

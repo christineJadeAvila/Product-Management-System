@@ -59,7 +59,7 @@ function ProductsList() {
             </thead>
             <tbody>
               {products.map((product) => (
-                <tr key={product.id}>
+                <tr className="product-row" key={product.id}>
                   <td><input type="checkbox" /></td>
                   <td><span className="product-icon">{product.img}</span> {product.name}</td>
                   <td>P{product.price}.00</td>
