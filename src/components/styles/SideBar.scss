@@ -1,6 +1,52 @@
 @import "../../index.scss";
 
 .sidebar-container {
-    width: 200px;
-    background-color: $dark-color;
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 310px;
+    background-color: $background-color;
+    .header-bar-info-container {
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        margin: 1rem;
+        .user-information-container {
+            background-color: $darker-than-white;
+            border: none;
+            border-radius: 20px;
+            padding: 0.2rem 3rem;
+            .user-name {
+                font-weight: 400;
+            }
+            .user-role {
+                font-weight: 400;
+            }
+        }
+        .close-button {
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 50px;
+            height: 20px;
+            background-color: $danger-color;
+        }
+    }
+    .navigation-section {
+        margin-top:50%;
+        .sidebar-navigation {
+            padding: 1rem;
+            text-decoration: none;
+            display: block;
+            &:hover {
+                background-color: $primary-color;
+                color: $background-color;
+            }
+        }
+    }
+    .footer-section {
+       position: fixed;
+       top: 95%;
+    }
 }

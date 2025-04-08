@@ -7,10 +7,10 @@ function BurgerMenu() {
 
   return (<>
     <div className="burger-menu">
-        <img src={burgerMenu} alt="" className="burger-menu"/>
+        <img src={burgerMenu} alt="" className="burger-menu" onClick={() => setIsOpen(!isOpen)}/>
     </div>
-    s
-    {isOpen && <SideBar/>}
+    
+    {isOpen && <SideBar onClose={() => setIsOpen(false)}/>}
   </>
   )
 }

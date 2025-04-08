@@ -1,4 +1,4 @@
-import burgerMenu from "../assets/burgerMenu.svg"
+import BurgerMenu from "../components/BurgerMenu";
 import SearchBar from "../components/SearchBar";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -31,7 +31,7 @@ function ProductsList() {
   return (
     <>
       <header className="header-bar">
-        <img src={burgerMenu} alt="" className="burger-menu" />
+        <BurgerMenu/>
         <h2 className="page-title">Product Management System</h2>
         <button className="add-product" onClick={add}>Add Product</button>
       </header>

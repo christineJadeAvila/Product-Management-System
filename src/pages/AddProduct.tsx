@@ -3,7 +3,7 @@ import { useState, useEffect  } from "react"
 import DateObject from "react-date-object"
 import calendar from "../assets/calendar.png"
 import clock from "../assets/clock.png"
-import burgerMenu from "../assets/burgerMenu.svg"
+import BurgerMenu from "../components/BurgerMenu"
 import "./styles/AddProducts.scss"
 
 function AddProduct() {
@@ -27,7 +27,7 @@ function AddProduct() {
       <a href="" onClick={back} className="back">back</a>
 
       <header className="header-bar">
-        <img src={burgerMenu} alt="" className="burger-menu" />
+        <BurgerMenu/>
         <h2 className="page-title">Product Management System</h2>
         {/* time and date */}
         <div className="time-n-date">
@@ -42,10 +42,9 @@ function AddProduct() {
       </header>
 
       {/* Add product form */}
+      <h2 className="add-product-header">Add Product</h2>
       <div className="form-container">
         <form>
-          <h2 className="add-product-header">Add Product</h2>
-          
           <div className="form-row">
             <label className="form-label required">Product Name</label>
             <input 
