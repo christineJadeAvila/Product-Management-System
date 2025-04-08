@@ -84,6 +84,9 @@
                     margin-right: 15px;
                     text-decoration: none;
                     cursor: pointer;
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
                 .update-link {
                     color: $primary-color;
