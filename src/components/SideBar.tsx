@@ -1,3 +1,5 @@
+import icon from "../assets/inventory-icon.png"
+import icon1 from "../assets/ready-stock.png"
 import "./styles/SideBar.scss"
 import logout from "../assets/logout-btn.svg"
 import xbtn from "../assets/x-btn.svg"
@@ -18,8 +20,14 @@ function SideBar({onClose}: Props) {
                 <div className="close-button" onClick={onClose}><img src={xbtn} alt="" /></div>
             </section>
             <nav className="navigation-section">
-                <a href="" className="sidebar-navigation inventory">Inventory</a>
-                <a href="" className="sidebar-navigation product">Product</a>
+                <div className="sidebar-navigation">
+                    <img className="icon" src={icon} alt="" />
+                    <p className="sidebar-text">Inventory</p>
+                </div>
+                <div className="sidebar-navigation product">
+                    <img className="icon1" src={icon1} alt="" />
+                    <p className="sidebar-text">Products</p>
+                </div>
             </nav>
             <footer className="footer-section">
                 <p className="logout-label">Log out</p>

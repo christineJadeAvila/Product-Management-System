@@ -40,17 +40,39 @@
                 border-radius: 50px;
                 height: 20px;
                 background-color: #FB4A4A4D;
+                img {
+                    &:hover{
+                        transform: scale(0.9);
+                    }
+                }
             }
         }
         .navigation-section {
             margin-top:50%;
+            
             .sidebar-navigation {
                 padding: 1rem;
-                text-decoration: none;
-                display: block;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                p{
+                    text-decoration: none;
+                    margin-left: 10px;
+                    &::after {
+                        color: $background-color
+                    }
+                }
+                
                 &:hover {
-                    background-color: $primary-color;
-                    color: $background-color;
+                    background-color: rgba(0, 123, 255, 0.3);
+                }
+                .icon {
+                    width: 50px;
+                    height: 50px;
+                }
+                .icon1 {
+                    width: 45px;
+                    height: 45px;
                 }
             }
         }

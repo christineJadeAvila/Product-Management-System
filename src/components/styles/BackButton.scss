@@ -3,4 +3,8 @@
 .back-button {
     width: 45px;
     cursor: pointer;
+    &:hover {
+        transform: scale(0.91);
+        transition: 1s;
+    }
 }
