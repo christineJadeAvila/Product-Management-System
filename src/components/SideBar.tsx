@@ -1,5 +1,4 @@
 import icon from "../assets/inventory-icon.png"
-import icon1 from "../assets/ready-stock.png"
 import "./styles/SideBar.scss"
 import logout from "../assets/logout-btn.svg"
 import xbtn from "../assets/x-btn.svg"
@@ -25,7 +24,7 @@ function SideBar({onClose}: Props) {
                     <p className="sidebar-text">Inventory</p>
                 </div>
                 <div className="sidebar-navigation product">
-                    <img className="icon1" src={icon1} alt="" />
+                    <img className="icon" src={icon} alt="" />
                     <p className="sidebar-text">Products</p>
                 </div>
             </nav>
@@ -34,7 +33,6 @@ function SideBar({onClose}: Props) {
                 <img src={logout} alt="" className="logout-button" />
             </footer>
         </div>
-        <div className="background-opacity">{/* background color */}</div>
     </div>
   </>
   )
