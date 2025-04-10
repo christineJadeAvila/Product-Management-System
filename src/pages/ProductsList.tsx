@@ -1,5 +1,6 @@
 import BurgerMenu from "../components/BurgerMenu";
 import SearchBar from "../components/SearchBar";
+import LogoBanner from "../components/LogoBanner";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./styles/ProductsList.scss";
@@ -30,6 +31,7 @@ function ProductsList() {
 
   return (
     <>
+      <LogoBanner/>
       <header className="header-bar">
         <BurgerMenu/>
         <h2 className="page-title">Product Management System</h2>

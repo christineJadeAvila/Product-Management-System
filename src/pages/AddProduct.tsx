@@ -1,11 +1,13 @@
 import BurgerMenu from "../components/BurgerMenu"
 import BackButton from "../components/BackButton"
 import TimeAndDate from "../components/TimeAndDate"
+import LogoBanner from "../components/LogoBanner"
 import "./styles/AddProducts.scss"
 
 function AddProduct() {
   return (
-    <>
+    <>  
+      <LogoBanner/>
       <header className="header-bar">
         <BurgerMenu/>
         <h2 className="page-title">Product Management System</h2>
