@@ -15,7 +15,17 @@ interface Product {
 }
 
 function ProductsList() {
+  const [openedModal, setOpenedModal] = useState<string>('add')
+  const [selectedButton, setSelectedButton] = useState<string>('inventory')
+  const handleOpenModal = (buttonName: string) => {
+    setOpenedModal(buttonName)
+  }
+  const handleButtonClick = (buttonName: string) => {
+    setSelectedButton(buttonName);
+  };
+
   const navigate = useNavigate()
+  
   const add = () => {
     navigate("add-product")
   }
@@ -29,25 +39,32 @@ function ProductsList() {
     { id: 3, name: "Pinoy Halo-Halo", category: "Dessert", price: 230.00, status: "Active", img: "🍧" },
   ]);
 
+  const [archivedProducts] = useState<Product[]>([
+  ]);
+
   return (
     <>
       <LogoBanner/>
       <header className="header-bar">
         <BurgerMenu/>
         <h2 className="page-title">Product Management System</h2>
+        
         <button className="add-product" onClick={add}>Add Product</button>
       </header>
       
       <div className="container">
         <aside className="side-bar">
           <nav className="nav-bar">
-            <a className="nav-elements active" href="">Products</a>
-            <a className="nav-elements" href="">Archived Products</a>
+            <a className={`nav-elements ${selectedButton==='products' ? 'active' : ''}`}
+               onClick={() => handleButtonClick('products')}>Products</a>
+            <a className={`nav-elements ${selectedButton==='archived' ? 'active' : ''}`}
+               onClick={() => handleButtonClick('archived')}>Archived Products</a>
           </nav>
         </aside>
         <main className="products-container">
           {/* Search Bar */}
           <SearchBar/>
+          {selectedButton === 'products' && (
           <table className="product-table">
             <thead>
               <tr>
@@ -75,6 +92,36 @@ function ProductsList() {
               ))}
             </tbody>
           </table>
+          )} 
+          {selectedButton === 'archived' && (
+            <table className="product-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {archivedProducts.map((product) => (
+                <tr className="product-row" key={product.id}>
+                  <td><input type="checkbox" /></td>
+                  <td><span className="product-icon">{product.img}</span> {product.name}</td>
+                  <td>P{product.price}.00</td>
+                  <td>{product.category}</td>
+                  <td>{product.status}</td>
+                  <td className="action-links">
+                    <a className="update-link" onClick={update}>Update</a> 
+                    <a className="delete-link">Archive</a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          )}
         </main>
         </div>
     </>

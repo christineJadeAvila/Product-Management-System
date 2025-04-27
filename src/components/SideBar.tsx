@@ -1,13 +1,22 @@
 import icon from "../assets/inventory-icon.png"
-import "./styles/SideBar.scss"
 import logout from "../assets/logout-btn.svg"
 import xbtn from "../assets/x-btn.svg"
+import { useNavigate } from "react-router-dom"
+import "./styles/SideBar.scss"
+
 
 type Props = {
     onClose: () => void
 }
 
 function SideBar({onClose}: Props) {
+    const navigate = useNavigate()
+    const inventory = () => {
+      navigate("/inventory")
+    }
+    const product = () => {
+        navigate("/")
+    }
   return (<>
     <div className="section-container">
         <div className="sidebar-container">
@@ -19,11 +28,11 @@ function SideBar({onClose}: Props) {
                 <div className="close-button" onClick={onClose}><img src={xbtn} alt="" /></div>
             </section>
             <nav className="navigation-section">
-                <div className="sidebar-navigation">
+                <div onClick={inventory} className="sidebar-navigation">
                     <img className="icon" src={icon} alt="" />
                     <p className="sidebar-text">Inventory</p>
                 </div>
-                <div className="sidebar-navigation product">
+                <div onClick={product} className="sidebar-navigation product">
                     <img className="icon" src={icon} alt="" />
                     <p className="sidebar-text">Products</p>
                 </div>

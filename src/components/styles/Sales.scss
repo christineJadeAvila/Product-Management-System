@@ -1,0 +1,86 @@
+.sales-tab {
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    color: #1f2937;
+  
+    .top-controls-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+  
+      .inventory-search-container {
+        .inventory-label {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: #111827;
+        }
+      }
+  
+      .sales-actions {
+        display: flex;
+        gap: 1rem;
+  
+        .action-button,
+        .add-product-button {
+          padding: 0.6rem 1.2rem;
+          font-size: 0.95rem;
+          font-weight: 500;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.2s ease-in-out;
+        }
+  
+        .action-button {
+          background-color: #e5e7eb;
+          color: #1f2937;
+  
+          &.active {
+            background-color: #3b82f6;
+            color: #ffffff;
+          }
+  
+          &:hover {
+            background-color: #d1d5db;
+          }
+        }
+  
+        .add-product-button {
+          background-color: #10b981;
+          color: #ffffff;
+  
+          &:hover {
+            background-color: #059669;
+          }
+        }
+      }
+    }
+  
+    .transactions-container,
+    .new-sale-form {
+      background-color: #ffffff;
+      padding: 1.5rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+  
+      h2 {
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+        color: #374151;
+      }
+  
+      .no-records-message {
+        font-size: 0.95rem;
+        color: #9ca3af;
+      }
+  
+      .sales-records-list {
+        p {
+          font-size: 0.95rem;
+          color: #4b5563;
+        }
+      }
+    }
+  }
+  
