@@ -3,6 +3,7 @@ import Inventory from "./pages/Inventory"
 import ProductsList from "./pages/ProductsList"
 import AddProduct from "./pages/AddProduct"
 import UpdateProduct from "./pages/UpdateProduct"
+import Login from "./pages/login"
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <>
       <HashRouter>
         <Routes>
-          <Route path="/" element={<ProductsList/>}></Route>
+          <Route path="/" element={<Login/>}></Route>
+          <Route path="/product-list" element={<ProductsList/>}></Route>
           <Route path="/add-product" element={<AddProduct/>}></Route>
           <Route path="/update-product" element={<UpdateProduct/>}></Route>
           <Route path="/inventory" element={<Inventory/>}></Route>

@@ -5,7 +5,7 @@ import "./styles/BackButton.scss"
 function BackButton() {
   const navigate = useNavigate()
   const back = () => {
-    navigate("/")
+    navigate("/product-list")
   }
   return (
     <><img src={arrow} onClick={back} className="back-button"/></>

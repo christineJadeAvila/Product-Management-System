@@ -11,11 +11,14 @@ type Props = {
 
 function SideBar({onClose}: Props) {
     const navigate = useNavigate()
+    const handleLogout = () => {
+      navigate('/'); // Redirect to the login page
+    };
     const inventory = () => {
       navigate("/inventory")
     }
     const product = () => {
-        navigate("/")
+        navigate("/product-list")
     }
   return (<>
     <div className="section-container">
@@ -39,7 +42,7 @@ function SideBar({onClose}: Props) {
             </nav>
             <footer className="footer-section">
                 <p className="logout-label">Log out</p>
-                <img src={logout} alt="" className="logout-button" />
+                <img onClick={handleLogout} src={logout} alt="" className="logout-button" />
             </footer>
         </div>
     </div>

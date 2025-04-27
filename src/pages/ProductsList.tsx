@@ -16,7 +16,7 @@ interface Product {
 
 function ProductsList() {
   const [openedModal, setOpenedModal] = useState<string>('add')
-  const [selectedButton, setSelectedButton] = useState<string>('inventory')
+  const [selectedButton, setSelectedButton] = useState<string>('products')
   const handleOpenModal = (buttonName: string) => {
     setOpenedModal(buttonName)
   }
