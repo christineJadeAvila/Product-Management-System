@@ -60,6 +60,9 @@
     // PRODUCTS CONTAINER
     .products-container {
         margin: 0.5rem;
+        .section-title {
+            padding: 1rem;
+        }
 
         .product-table {
             width: 100%;
@@ -98,6 +101,9 @@
                         padding: 1px 4px;
                     }
                 }
+                .product-table-image {
+                    width: 50px;
+                }
             }
             th {
                 background-color: #f9f9f9;
@@ -109,3 +115,4 @@
         }
     }
 }
+

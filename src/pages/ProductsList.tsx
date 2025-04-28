@@ -27,10 +27,10 @@ function ProductsList() {
   const navigate = useNavigate()
   
   const add = () => {
-    navigate("add-product")
+    navigate("/add-product")
   }
   const update = () => {
-    navigate("update-product")
+    navigate("/update-product")
   }
 
   const [products] = useState<Product[]>([
@@ -63,6 +63,7 @@ function ProductsList() {
         </aside>
         <main className="products-container">
           {/* Search Bar */}
+          <h3 className="section-title">All Products </h3>
           <SearchBar/>
           {selectedButton === 'products' && (
           <table className="product-table">
