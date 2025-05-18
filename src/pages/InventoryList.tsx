@@ -1,5 +1,8 @@
 import BurgerMenu from "../components/BurgerMenu";
 import SearchBar from "../components/SearchBar";
+import Sales from "./Sales";
+import Suppliers from "./Suppliers";
+import Purchase from "./Purchase";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./styles/ProductsList.scss";
@@ -64,7 +67,6 @@ function InventoryList() {
         </aside>
         <main className="products-container">
           {/* Search Bar */}
-          <h3 className="section-title">All Products </h3>
           <SearchBar/>
           {/* ALL STOCKS TEMPLATE */}
           {selectedButton === 'current' && (
@@ -78,6 +80,7 @@ function InventoryList() {
                 <th>Expiry Date</th>
                 <th>Warehouse</th>
                 <th>Supplier</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -101,13 +104,13 @@ function InventoryList() {
           )} 
           {/* ARCHIVED PRODUCTS TEMPLATE */}
           {selectedButton === 'suppliers' && (
-            <h1>Suppliers</h1>
+            <Suppliers/>
           )}
           {selectedButton === 'purchased' && (
-            <h1>Purchased</h1>
+            <Purchase/>
           )}
           {selectedButton === 'sales' && (
-            <h1>Sales</h1>
+            <Sales/>
           )}
         </main>
         </div>

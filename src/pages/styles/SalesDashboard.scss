@@ -1,0 +1,96 @@
+.sales-dashboard {
+  padding: 2rem;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .date-filter {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+  }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    .metric-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      padding: 1rem;
+
+      .value {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0.5rem 0;
+      }
+
+      .change {
+        color: #4caf50;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .chart-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    .product-sales-card,
+    .warehouse-capacity-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      padding: 1rem;
+    }
+
+    .capacity-bar {
+      display: flex;
+      height: 30px;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 1rem;
+      position: relative;
+
+      .warehouse1 {
+        background-color: #00e6e6;
+      }
+
+      .warehouse2 {
+        background-color: #0077ff;
+      }
+
+      .capacity-label {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        margin-top: -25px;
+        font-size: 1.2rem;
+        color: #fff;
+      }
+    }
+
+    .low-stock-alert {
+      margin-top: 1rem;
+      color: #e53935;
+      font-weight: 500;
+    }
+  }
+}
