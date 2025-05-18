@@ -33,7 +33,7 @@ function createWindow() {
     webPreferences: {
       preload: path.join(__dirname, 'preload.mjs'),
     },
-    fullscreen: true
+    // fullscreen: true
   })
 
   // Test active push message to Renderer-process.
