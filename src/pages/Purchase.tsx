@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 interface PurchaseOrder {
   id: number;
@@ -16,6 +16,7 @@ function Purchase() {
       { id: 1, item_name: "Pork Meat", quantity: 3, supplier: "Supplier 3", total: 3_250, warehouse: "Warehouse 1"},
       { id: 1, item_name: "Chicken Meat", quantity: 3, supplier: "Supplier 3", total: 2_250, warehouse: "Warehouse 1"},
     ])
+  
   return (
     <table className="product-table">
             <thead>

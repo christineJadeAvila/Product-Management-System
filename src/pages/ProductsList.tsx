@@ -2,16 +2,9 @@ import BurgerMenu from "../components/BurgerMenu";
 import SearchBar from "../components/SearchBar";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import useProducts from "../utilities/useProducts";
 import "./styles/ProductsList.scss";
 
-interface Product {
-  id: number;
-  name: string;
-  category: string;
-  price: number;
-  status: string;
-  img: string;
-}
 
 function ProductsList() {
   const [openedModal, setOpenedModal] = useState<string>('add')
@@ -32,14 +25,10 @@ function ProductsList() {
     navigate("/update-product")
   }
 
-  const [products] = useState<Product[]>([
-    { id: 1, name: "Banana Split", category: "Dessert", price: 180.00, status: "Active", img: "🍰" },
-    { id: 2, name: "Buko Pandan", category: "Dessert", price: 140.00, status: "Active", img: "🥥" },
-    { id: 3, name: "Pinoy Halo-Halo", category: "Dessert", price: 230.00, status: "Active", img: "🍧" },
-  ]);
+  const products = useProducts()
 
-  const [archivedProducts] = useState<Product[]>([
-  ]);
+  // const [archivedProducts] = useState<Product[]>([
+  // ]);
 
   return (
     <>
@@ -72,18 +61,16 @@ function ProductsList() {
                 <th>Product</th>
                 <th>Price</th>
                 <th>Category</th>
-                <th>Status</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
               {products.map((product) => (
-                <tr className="product-row" key={product.id}>
+                <tr className="product-row" key={product.productID}>
                   <td><input type="checkbox" /></td>
-                  <td><span className="product-icon">{product.img}</span> {product.name}</td>
-                  <td>P{product.price}.00</td>
-                  <td>{product.category}</td>
-                  <td>{product.status}</td>
+                  <td><span className="product-icon"></span> {product.product_name}</td>
+                  <td>P{product.price}</td>
+                  <td>{product.categoryid}</td>
                   <td className="action-links">
                     <a className="update-link" onClick={update}>Update</a> 
                     <a className="delete-link">Archive</a>
@@ -107,19 +94,7 @@ function ProductsList() {
               </tr>
             </thead>
             <tbody>
-              {archivedProducts.map((product) => (
-                <tr className="product-row" key={product.id}>
-                  <td><input type="checkbox" /></td>
-                  <td><span className="product-icon">{product.img}</span> {product.name}</td>
-                  <td>P{product.price}.00</td>
-                  <td>{product.category}</td>
-                  <td>{product.status}</td>
-                  <td className="action-links">
-                    <a className="update-link" onClick={update}>Update</a> 
-                    <a className="delete-link">Archive</a>
-                  </td>
-                </tr>
-              ))}
+              
             </tbody>
           </table>
           )}
