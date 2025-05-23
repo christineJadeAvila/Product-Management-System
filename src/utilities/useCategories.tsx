@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import api from "../api";
 
 interface Category {
-    categoryId: number
+    categoryid: number
     category_name: string
     description: string
 }

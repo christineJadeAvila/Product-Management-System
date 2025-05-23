@@ -1,21 +1,8 @@
-import { useState } from 'react'
-
-interface PurchaseOrder {
-  id: number;
-  item_name: string;
-  quantity: number;
-  supplier: string;
-  total: number;
-  warehouse: string;
-}
+import useStockOrders from '../utilities/useStockOrders';
 
 function Purchase() {
 
-    const [orders] = useState<PurchaseOrder[]> ([
-      { id: 1, item_name: "Beef Meat", quantity: 3, supplier: "Supplier 3", total: 5_250, warehouse: "Warehouse 1"},
-      { id: 1, item_name: "Pork Meat", quantity: 3, supplier: "Supplier 3", total: 3_250, warehouse: "Warehouse 1"},
-      { id: 1, item_name: "Chicken Meat", quantity: 3, supplier: "Supplier 3", total: 2_250, warehouse: "Warehouse 1"},
-    ])
+   const orders = useStockOrders()
   
   return (
     <table className="product-table">
@@ -32,13 +19,13 @@ function Purchase() {
             </thead>
             <tbody>
               {orders.map((order) => (
-                <tr className="product-row" key={order.id}>
+                <tr className="product-row" key={order.purchaseID}>
                   <td><input type="checkbox" /></td>
-                  <td>{order.item_name}</td>
+                  <td>{order.purchaseItemName}</td>
                   <td>{order.quantity}</td>
-                  <td>{order.supplier}</td>
+                  <td>{order.supplierID}</td>
                   <td>{order.total}</td>
-                  <td>{order.warehouse}</td>
+                  <td>{order.warehouseID}</td>
                   <td className="action-links">
                     <a className="positive-link">Receive</a>
                     <a className="delete-link">Cancel</a>

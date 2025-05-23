@@ -5,13 +5,8 @@ import { useState } from "react";
 import useProducts from "../utilities/useProducts";
 import "./styles/ProductsList.scss";
 
-
 function ProductsList() {
-  const [openedModal, setOpenedModal] = useState<string>('add')
   const [selectedButton, setSelectedButton] = useState<string>('products')
-  const handleOpenModal = (buttonName: string) => {
-    setOpenedModal(buttonName)
-  }
   const handleButtonClick = (buttonName: string) => {
     setSelectedButton(buttonName);
   };
