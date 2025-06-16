@@ -2,7 +2,7 @@ import BurgerMenu from "../components/BurgerMenu";
 import SearchBar from "../components/SearchBar";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import useProducts from "../utilities/useProducts";
+import useProducts from "../hooks/useProducts";
 import "./styles/ProductsList.scss";
 
 function ProductsList() {
@@ -14,7 +14,7 @@ function ProductsList() {
   const navigate = useNavigate()
   
   const add = () => {
-    navigate("/add-product")
+    navigate("/add-supplier")
   }
   const update = () => {
     navigate("/update-product")

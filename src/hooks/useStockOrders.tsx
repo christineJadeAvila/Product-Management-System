@@ -2,12 +2,12 @@ import { useState, useEffect } from "react"
 import api from "../api"
 
 interface StockItems {
-    purchaseID: number
-    purchaseItemName: string
+    purchaseid: number
+    purchaseitemname: string
     quantity: string
-    supplierID: number
+    supplierid: number
     total: number
-    warehouseID: number
+    warehouseid: number
 }
 
 export default function useStockOrders(): StockItems[] {

@@ -1,4 +1,4 @@
-import useStockOrders from '../utilities/useStockOrders';
+import useStockOrders from '../hooks/useStockOrders';
 
 function Purchase() {
 
@@ -19,13 +19,13 @@ function Purchase() {
             </thead>
             <tbody>
               {orders.map((order) => (
-                <tr className="product-row" key={order.purchaseID}>
+                <tr className="product-row" key={order.purchaseid}>
                   <td><input type="checkbox" /></td>
-                  <td>{order.purchaseItemName}</td>
+                  <td>{order.purchaseitemname}</td>
                   <td>{order.quantity}</td>
-                  <td>{order.supplierID}</td>
+                  <td>{order.supplierid}</td>
                   <td>{order.total}</td>
-                  <td>{order.warehouseID}</td>
+                  <td>{order.warehouseid}</td>
                   <td className="action-links">
                     <a className="positive-link">Receive</a>
                     <a className="delete-link">Cancel</a>

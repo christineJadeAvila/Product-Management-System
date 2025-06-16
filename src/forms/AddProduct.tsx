@@ -3,7 +3,7 @@ import api from "../api"
 import BurgerMenu from "../components/BurgerMenu"
 import BackButton from "../components/BackButton"
 import TimeAndDate from "../components/TimeAndDate"
-import useCategories from "../utilities/useCategories"
+import useCategories from "../hooks/useCategories"
 import "./styles/AddProducts.scss"
 
 function AddProduct() {

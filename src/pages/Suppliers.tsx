@@ -1,21 +1,17 @@
-import { useState } from "react";
-
-interface Supplier {
-  id: number;
-  name: string;
-  contactPerson: string;
-  phone: string;
-  email: string;
-  address: string;
-  supplierType: string;
-}
+import useSuppliers from "../hooks/useSuppliers"
 
 function Suppliers() {
-    const [suppliers] = useState<Supplier[]>([
-        { id: 1, name: "Fresh Farms Co.",contactPerson: "Maria Santos", phone: "0917-111-2233", email: "maria@freshfarms.com", address: "Barangay 2, Davao City", supplierType: "Produce "},
-        { id: 2, name: "Meat Central", contactPerson: "Jose Dela Cruz", phone: "0918-222-3344", email: "jose@meatcentral.ph", address: "Agdao, Davao City",supplierType: "Meat & Seafood" },
-        { id: 3, name: "Beverage Hub", contactPerson: "Ana Lopez", phone: "0920-333-4455", email: "ana@beveragehub.com", address: "Matina, Davao City", supplierType: "Beverages" },
-    ])
+  const { suppliers, loading, error, deleteSupplier, refreshSuppliers} = useSuppliers()
+
+  const handleDelete = async (supplierid: number, supplierName: string) => {
+        const success = await deleteSupplier(supplierid, supplierName)
+        if (success) {
+            alert('Supplier deleted successfully!')
+        }
+    }
+
+    if (loading) return <div>Loading suppliers...</div>
+    if (error) return <div style={{color: 'red'}}>Error: {error}</div>
 
   return (
     <>
@@ -27,18 +23,25 @@ function Suppliers() {
                 <th>Contact Person</th>
                 <th>Phone Number</th>
                 <th>Email</th>
+                <th>Address</th>
                 <th>Supplier Type</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
               {suppliers.map((supplier) => (
-                <tr className="product-row" key={supplier.id}>
+                <tr className="product-row" key={supplier.supplierid}>
                   <td><input type="checkbox" /></td>
-                  <td>{supplier.name}</td>
-                  <td>{supplier.contactPerson}</td>
+                  <td>{supplier.suppliername}</td>
+                  <td>{supplier.contactperson}</td>
                   <td>{supplier.phone}</td>
                   <td>{supplier.email}</td>
-                  <td>{supplier.supplierType}</td>
+                  <td>{supplier.address}</td>
+                  <td>{supplier.suppliertype}</td>
+                  <td className="action-links">
+                    <a onClick={() => console.log('Edit supplier:', supplier.supplierid)} className="update-link">Update</a> 
+                    <a onClick={() => handleDelete(supplier.supplierid, supplier.suppliername)} className="delete-link">Delete</a>
+                  </td>
                 </tr>
               ))}
             </tbody>

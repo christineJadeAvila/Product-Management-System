@@ -1,8 +1,9 @@
 import { HashRouter, Routes, Route } from "react-router-dom"
 import InventoryList from "./pages/InventoryList"
 import ProductsList from "./pages/ProductsList"
-import AddProduct from "./pages/AddProduct"
-import UpdateProduct from "./pages/UpdateProduct"
+import AddProduct from "./forms/AddProduct"
+import AddSupplier from "./forms/AddSupplier"
+import UpdateProduct from "./forms/UpdateProduct"
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path="/add-product" element={<AddProduct/>}></Route>
           <Route path="/update-product" element={<UpdateProduct/>}></Route>
           <Route path="/inventory" element={<InventoryList/>}></Route>
+          <Route path="/add-supplier" element={<AddSupplier/>}></Route>
         </Routes>
       </HashRouter>
     </>
