@@ -4,14 +4,10 @@
 
 A full-featured product and inventory management system built using **Node.js**, **Express**, **PostgreSQL**, and **React.js**. Designed to streamline the process of managing products, suppliers, categories, warehouses, and purchases — this system is ideal for small to medium-sized businesses looking for an efficient way to manage stock and inventory.
 
-> 📌 This project is part of my personal portfolio. I'm continuously improving it to sharpen my full-stack development skills.
-
 ---
 
 ## 📸 Screenshots
-
-> _Coming soon_ — I will be adding images here to showcase the interface, user roles, and key features.
-
+C:\Users\teste\Product-Management-System\readme assets\Screenshot 2025-05-18 230837.png
 ---
 
 ## ⚙️ Features
