@@ -7,7 +7,7 @@ A full-featured product and inventory management system built using **Node.js**,
 ---
 
 ## 📸 Screenshots
-C:\Users\teste\Product-Management-System\readme assets\Screenshot 2025-05-18 230837.png
+![Screenshot 2025-05-18 230837](https://github.com/user-attachments/assets/3740f5b4-b2d1-4ba4-adf3-40dadaa161a3)
 ---
 
 ## ⚙️ Features
